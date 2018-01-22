@@ -35,7 +35,7 @@ const (
 
 func read() {
 	for running == 1 {
-		result, err := read_client.BLPop(100*time.Millisecond, READ_KEY).Result()
+		result, err := read_client.BLPop(1*time.Second, READ_KEY).Result()
 		if err != nil {
 			log.Printf("redis BLPop err. %s === %#v", err, err)
 			if err == redis.Nil {
@@ -64,6 +64,7 @@ func read() {
 }
 
 var sleep = flag.Int("n", 5000, "")
+var timeout = flag.
 var host = flag.String("h", "100.69.198.63:6379", "host")
 var host2 = flag.String("h2", "100.69.198.63:6379", "host")
 var host3 = flag.String("h3", "100.69.198.63:6379", "host")
