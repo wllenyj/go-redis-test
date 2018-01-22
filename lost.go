@@ -64,7 +64,6 @@ func read() {
 }
 
 var sleep = flag.Int("n", 5000, "")
-var timeout = flag.
 var host = flag.String("h", "100.69.198.63:6379", "host")
 var host2 = flag.String("h2", "100.69.198.63:6379", "host")
 var host3 = flag.String("h3", "100.69.198.63:6379", "host")
